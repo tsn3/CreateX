@@ -27,6 +27,6 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.announcement-bar__message {
-  color: #17696a;
+.header .site-navigation-wrapper {
+  background-color: #e5e5e5;
 }

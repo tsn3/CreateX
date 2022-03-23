@@ -1,3 +1,44 @@
-.announcement-bar__message {
-  color: $primary;
+// --- header--- //
+.header {
+  //display: block;
+  //padding-top: 0  !important;
+
+  //.site-header-wrapper {
+  //  background-color: $white;
+  //  width: 100%;
+  //}
+  //
+  //.site-header-account-links {
+  //  display: none;
+  //
+  //  @media screen and (min-width: 990px) {
+  //    align-items: center;
+  //    display: flex;
+  //    margin-left: 75px;
+  //
+  //    //.site-header-account-button:hover {
+  //    //  color: $black;
+  //    //  text-decoration: underline;
+  //    //}
+  //  }
+  //}
+  //
+  //.account-button-separator {
+  //  font-size: 11px;
+  //  padding: 8px;
+  //}
+
+  .site-navigation-wrapper {
+    background-color: $gray-background;
+
+    //@media screen and (min-width: 990px) {
+    //  min-height: 40px;
+    //}
+    //
+    //.site-navigation {
+    //  margin: 0 auto;
+    //  max-width: 1440px;
+    //}
+  }
+
 }
