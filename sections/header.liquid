@@ -320,6 +320,7 @@
         </ul>
       </nav>
     {%- endif -%}
+        <div class='mt-language-menu'> </div>
         <div class="site-header-account-links">
           <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
             {% render 'icon-account' %}
