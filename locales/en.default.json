@@ -343,6 +343,7 @@
       "password": "Password",
       "title": "Login",
       "sign_in": "Sign in",
+      "register": "Register",
       "submit": "Submit"
     },
     "order": {
