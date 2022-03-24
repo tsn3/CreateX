@@ -27,6 +27,33 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.page-width {
+  max-width: 1230px;
+}
+
+.header {
+  display: block;
+  height: 128px;
+}
+.header .site-header-wrapper {
+  background-color: #424551;
+  width: 100%;
+}
+.header .site-header-main {
+  background-color: #1e212c;
+  align-items: center;
+  /* white */
+}
+@media screen and (min-width: 990px) {
+  .header .site-header-main {
+    min-height: 44px;
+  }
+}
+.header .site-header-main .list-menu__item {
+  color: #fff;
+  opacity: 0.6;
+}
 .header .site-navigation-wrapper {
   background-color: #e5e5e5;
+  min-height: 84px;
 }

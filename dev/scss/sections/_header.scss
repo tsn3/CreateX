@@ -1,12 +1,13 @@
 // --- header--- //
 .header {
-  //display: block;
+  display: block;
+  height:128px;
   //padding-top: 0  !important;
 
-  //.site-header-wrapper {
-  //  background-color: $white;
-  //  width: 100%;
-  //}
+  .site-header-wrapper {
+    background-color: $gray-800;
+    width: 100%;
+  }
   //
   //.site-header-account-links {
   //  display: none;
@@ -28,8 +29,35 @@
   //  padding: 8px;
   //}
 
+  .site-header-main {
+    background-color: $gray-900;
+    align-items: center;
+    //display: grid;
+    //grid-template-areas: 'left-icon heading icons';
+    //grid-template-columns: 1fr 2fr 1fr;
+    //margin: 0 auto;
+    //max-width: 1440px;
+    //min-height: 84px;
+    //padding: 12px 20px !important;
+
+    @media screen and (min-width: 990px) {
+      min-height: 44px;
+    }
+    /* white */
+    .list-menu__item {
+      color: $white;
+      opacity: .6;
+    }
+
+    //.site-navigation {
+    //  margin: 0 auto;
+    //  max-width: 1440px;
+    //}
+  }
+
   .site-navigation-wrapper {
     background-color: $gray-background;
+    min-height: 84px;
 
     //@media screen and (min-width: 990px) {
     //  min-height: 40px;
