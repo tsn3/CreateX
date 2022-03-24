@@ -53,7 +53,23 @@ body {
   color: #fff;
   opacity: 0.6;
 }
+.header .site-header-main .menu-drawer__account,
+.header .site-header-main .account-button-separator,
+.header .site-header-main .footer-phone-block__details-content {
+  color: #fff;
+  opacity: 0.6;
+}
 .header .site-navigation-wrapper {
-  background-color: #e5e5e5;
+  background-color: #fff;
   min-height: 84px;
+}
+.header .site-navigation-wrapper .header__icon--cart {
+  width: 22px;
+}
+.header .site-navigation-wrapper .cart-count-bubble {
+  background-color: #03cea4;
+  width: 23px;
+  height: 20px;
+  left: 30px;
+  border-radius: 4px;
 }

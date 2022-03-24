@@ -48,6 +48,12 @@
       color: $white;
       opacity: .6;
     }
+    .menu-drawer__account,
+    .account-button-separator,
+    .footer-phone-block__details-content {
+      color: $white;
+      opacity: .6;
+    }
 
     //.site-navigation {
     //  margin: 0 auto;
@@ -56,7 +62,7 @@
   }
 
   .site-navigation-wrapper {
-    background-color: $gray-background;
+    background-color: $white;
     min-height: 84px;
 
     //@media screen and (min-width: 990px) {
@@ -67,6 +73,20 @@
     //  margin: 0 auto;
     //  max-width: 1440px;
     //}
+
+    .header__icon--cart {
+      width: 22px;
+    }
+
+    .cart-count-bubble {
+      background-color: $success;
+      width: 23px;
+      height: 20px;
+      left: 30px;
+      //top: 1px;
+      border-radius: 4px;
+    }
   }
+
 
 }

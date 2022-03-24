@@ -95,6 +95,10 @@
   <header class="header header--{{ section.settings.logo_position }} {% if section.settings.menu != blank %} header--has-menu{% endif %}">
     <div class="site-header-main">
       <div class="page-width">
+        <div class="footer-phone-block__details-content">
+          <p class="header-phone">{{ section.settings.header-phone | escape }}</p>
+        </div>
+
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -328,7 +332,7 @@
             -%}
           </a>
           <span class="account-button-separator">/</span>
-          <a href="{{ routes.account_register_url }}">
+          <a href="{{ routes.account_register_url }}" class="menu-drawer__account">
             {{ 'customer.login_page.register' | t }}
           </a>
         </div>
@@ -762,6 +766,12 @@
       ],
       "default": "background-1",
       "label": "t:sections.header.settings.color_scheme.label"
+    },
+    {
+      "type": "richtext",
+      "id": "header-phone",
+      "default": "<p>(488) 555-555.</p>",
+      "label": "Phone"
     },
     {
       "type": "image_picker",
