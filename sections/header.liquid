@@ -95,8 +95,9 @@
   <header class="header header--{{ section.settings.logo_position }} {% if section.settings.menu != blank %} header--has-menu{% endif %}">
     <div class="site-header-main">
       <div class="page-width site-header-main-wrapper">
-        <div class="footer-phone-block__details-content">
-          <p class="header-phone">{{ section.settings.header-phone | escape }}</p>
+        <div class="footer-phone-block">
+          <p class="header-phone-title">{{ section.settings.phone-title | escape }}</p>
+          <a class="header-phone" href="tel:{{ section.settings.header-phone | escape }}" onclick="ga('send', 'event', { eventCategory: 'Contact', eventAction: 'Call', eventLabel: 'Mobile Button'});">{{ section.settings.header-phone | escape }}</a>
         </div>
 
     {%- if section.settings.menu != blank -%}
@@ -745,9 +746,15 @@
       "label": "t:sections.header.settings.color_scheme.label"
     },
     {
-      "type": "richtext",
+      "type": "text",
+      "id": "phone-title",
+      "default": "Available 24/7 at ",
+      "label": "Phone title"
+    },
+    {
+      "type": "text",
       "id": "header-phone",
-      "default": "<p>(488) 555-555.</p>",
+      "default": " (488) 555-555",
       "label": "Phone"
     },
     {

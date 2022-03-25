@@ -51,7 +51,7 @@ body {
   align-items: center;
   display: grid;
   grid-template-areas: "left-icon navigation language icons";
-  grid-template-columns: 1fr 3fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
 }
 .header .site-header-main .mt-language-menu {
   grid-area: language;
@@ -69,10 +69,18 @@ body {
 }
 .header .site-header-main .menu-drawer__account,
 .header .site-header-main .account-button-separator,
-.header .site-header-main .footer-phone-block__details-content {
+.header .site-header-main .footer-phone-block {
   color: #fff;
   opacity: 0.6;
   font-size: 14px;
+}
+.header .site-header-main .footer-phone-block {
+  display: flex;
+  align-items: center;
+}
+.header .site-header-main .header-phone {
+  text-decoration: none;
+  color: #fff;
 }
 .header .site-header-main .menu-drawer__account {
   margin-left: 0;

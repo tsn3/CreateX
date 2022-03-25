@@ -20,7 +20,7 @@
       align-items: center;
       display: grid;
       grid-template-areas: 'left-icon navigation language icons';
-      grid-template-columns: 1fr 3fr 1fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr 1fr;
     }
 
     .mt-language-menu {
@@ -43,11 +43,22 @@
 
     .menu-drawer__account,
     .account-button-separator,
-    .footer-phone-block__details-content {
+    .footer-phone-block {
       color: $white;
       opacity: .6;
       font-size: 14px;
     }
+
+    .footer-phone-block {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-phone {
+      text-decoration: none;
+      color: $white;
+    }
+
     .menu-drawer__account {
       margin-left: 0;
     }
