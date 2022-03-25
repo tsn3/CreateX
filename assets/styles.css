@@ -41,27 +41,54 @@ body {
 }
 .header .site-header-main {
   background-color: #1e212c;
-  align-items: center;
-  /* white */
 }
 @media screen and (min-width: 990px) {
   .header .site-header-main {
     min-height: 44px;
   }
 }
+.header .site-header-main .site-header-main-wrapper {
+  align-items: center;
+  display: grid;
+  grid-template-areas: "left-icon navigation icons";
+  grid-template-columns: 1fr 3fr 1fr;
+}
+.header .site-header-main .header__inline-menu {
+  margin: 0 auto;
+}
 .header .site-header-main .list-menu__item {
   color: #fff;
   opacity: 0.6;
+}
+.header .site-header-main .site-header-account-links {
+  display: inline-flex;
+  align-items: center;
 }
 .header .site-header-main .menu-drawer__account,
 .header .site-header-main .account-button-separator,
 .header .site-header-main .footer-phone-block__details-content {
   color: #fff;
   opacity: 0.6;
+  font-size: 14px;
+}
+.header .site-header-main .menu-drawer__account {
+  margin-left: 0;
 }
 .header .site-navigation-wrapper {
   background-color: #fff;
   min-height: 84px;
+}
+.header .site-navigation-wrapper .header__icons {
+  justify-self: end;
+  margin-right: 100px;
+}
+.header .site-navigation-wrapper .site-header-navigation-wrapper {
+  display: grid;
+  grid-template-areas: "headin navigation icons";
+  grid-template-columns: 1fr 2fr 2fr;
+}
+.header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading {
+  grid-area: unset;
 }
 .header .site-navigation-wrapper .header__icon--cart {
   width: 22px;

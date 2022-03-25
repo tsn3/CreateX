@@ -94,7 +94,7 @@
 <{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper site-header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} {% if section.settings.menu != blank %} header--has-menu{% endif %}">
     <div class="site-header-main">
-      <div class="page-width">
+      <div class="page-width site-header-main-wrapper">
         <div class="footer-phone-block__details-content">
           <p class="header-phone">{{ section.settings.header-phone | escape }}</p>
         </div>
@@ -342,7 +342,7 @@
     </div>
 
     <div class="site-navigation-wrapper">
-      <div class="page-width">
+      <div class="page-width site-header-navigation-wrapper">
       {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
         <details-modal class="header__search">
           <details>

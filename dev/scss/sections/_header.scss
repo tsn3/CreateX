@@ -2,77 +2,71 @@
 .header {
   display: block;
   height:128px;
-  //padding-top: 0  !important;
 
   .site-header-wrapper {
     background-color: $gray-800;
     width: 100%;
   }
-  //
-  //.site-header-account-links {
-  //  display: none;
-  //
-  //  @media screen and (min-width: 990px) {
-  //    align-items: center;
-  //    display: flex;
-  //    margin-left: 75px;
-  //
-  //    //.site-header-account-button:hover {
-  //    //  color: $black;
-  //    //  text-decoration: underline;
-  //    //}
-  //  }
-  //}
-  //
-  //.account-button-separator {
-  //  font-size: 11px;
-  //  padding: 8px;
-  //}
 
   .site-header-main {
     background-color: $gray-900;
-    align-items: center;
-    //display: grid;
-    //grid-template-areas: 'left-icon heading icons';
-    //grid-template-columns: 1fr 2fr 1fr;
-    //margin: 0 auto;
-    //max-width: 1440px;
-    //min-height: 84px;
-    //padding: 12px 20px !important;
+
 
     @media screen and (min-width: 990px) {
       min-height: 44px;
     }
-    /* white */
+
+    .site-header-main-wrapper {
+      align-items: center;
+      display: grid;
+      grid-template-areas: 'left-icon navigation icons';
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .header__inline-menu {
+      margin: 0 auto;
+    }
+
     .list-menu__item {
       color: $white;
       opacity: .6;
     }
+
+    .site-header-account-links {
+      display: inline-flex;
+      align-items: center;
+    }
+
     .menu-drawer__account,
     .account-button-separator,
     .footer-phone-block__details-content {
       color: $white;
       opacity: .6;
+      font-size: 14px;
     }
-
-    //.site-navigation {
-    //  margin: 0 auto;
-    //  max-width: 1440px;
-    //}
+    .menu-drawer__account {
+      margin-left: 0;
+    }
   }
 
   .site-navigation-wrapper {
     background-color: $white;
     min-height: 84px;
 
-    //@media screen and (min-width: 990px) {
-    //  min-height: 40px;
-    //}
-    //
-    //.site-navigation {
-    //  margin: 0 auto;
-    //  max-width: 1440px;
-    //}
+    .header__icons {
+      justify-self: end;
+      margin-right: 100px;
+    }
+
+    .site-header-navigation-wrapper {
+      display: grid;
+      grid-template-areas: "headin navigation icons";
+      grid-template-columns: 1fr 2fr 2fr;
+
+      .header__heading {
+        grid-area: unset;
+      }
+    }
 
     .header__icon--cart {
       width: 22px;
@@ -83,10 +77,7 @@
       width: 23px;
       height: 20px;
       left: 30px;
-      //top: 1px;
       border-radius: 4px;
     }
   }
-
-
 }
