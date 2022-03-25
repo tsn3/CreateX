@@ -90,8 +90,14 @@ body {
   grid-template-areas: "headin navigation icons";
   grid-template-columns: 1fr 2fr 2fr;
 }
-.header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading {
+.header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading,
+.header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading-link {
   grid-area: unset;
+}
+.header .site-navigation-wrapper .search-modal__form {
+  width: 380px;
+  height: 44px;
+  top: calc(50% - 22px + 22px);
 }
 .header .site-navigation-wrapper .header__icon--cart {
   width: 22px;

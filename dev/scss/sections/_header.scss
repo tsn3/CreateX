@@ -67,9 +67,16 @@
       grid-template-areas: "headin navigation icons";
       grid-template-columns: 1fr 2fr 2fr;
 
-      .header__heading {
+      .header__heading,
+      .header__heading-link {
         grid-area: unset;
       }
+    }
+
+    .search-modal__form {
+      width: 380px;
+      height: 44px;
+      top: calc(50% - 44px/2 + 22px);
     }
 
     .header__icon--cart {
