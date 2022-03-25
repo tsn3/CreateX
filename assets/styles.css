@@ -50,8 +50,11 @@ body {
 .header .site-header-main .site-header-main-wrapper {
   align-items: center;
   display: grid;
-  grid-template-areas: "left-icon navigation icons";
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "left-icon navigation language icons";
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+}
+.header .site-header-main .mt-language-menu {
+  grid-area: language;
 }
 .header .site-header-main .header__inline-menu {
   margin: 0 auto;
