@@ -104,5 +104,16 @@
       top: 12px;
       width: 23px;
     }
+
+    .swym-wishlist {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .fa-heart {
+      color: $gray-900;
+      opacity: .6;
+    }
   }
 }

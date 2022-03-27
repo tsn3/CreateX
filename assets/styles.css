@@ -120,3 +120,12 @@ body {
   top: 12px;
   width: 23px;
 }
+.header .site-navigation-wrapper .swym-wishlist {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header .site-navigation-wrapper .fa-heart {
+  color: #1e212c;
+  opacity: 0.6;
+}
