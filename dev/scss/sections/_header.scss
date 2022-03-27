@@ -37,26 +37,26 @@
     }
 
     .site-header-account-links {
-      display: inline-flex;
       align-items: center;
+      display: inline-flex;
     }
 
     .menu-drawer__account,
     .account-button-separator,
     .footer-phone-block {
       color: $white;
-      opacity: .6;
       font-size: 14px;
+      opacity: .6;
     }
 
     .footer-phone-block {
-      display: flex;
       align-items: center;
+      display: flex;
     }
 
     .header-phone {
-      text-decoration: none;
       color: $white;
+      text-decoration: none;
     }
 
     .menu-drawer__account {
@@ -74,9 +74,11 @@
     }
 
     .site-header-navigation-wrapper {
+      align-content: center;
       display: grid;
       grid-template-areas: "headin navigation icons";
       grid-template-columns: 1fr 2fr 2fr;
+      min-height: 84px;
 
       .header__heading,
       .header__heading-link {
@@ -85,21 +87,22 @@
     }
 
     .search-modal__form {
-      width: 380px;
       height: 44px;
-      top: calc(50% - 44px/2 + 22px);
+      width: 380px;
     }
 
     .header__icon--cart {
+      margin-left: 52px;
       width: 22px;
     }
 
     .cart-count-bubble {
       background-color: $success;
-      width: 23px;
+      border-radius: 4px;
       height: 20px;
       left: 30px;
-      border-radius: 4px;
+      top: 12px;
+      width: 23px;
     }
   }
 }

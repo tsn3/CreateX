@@ -4,17 +4,17 @@ html {
 }
 
 body {
+  font-family: "Lato", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
-  font-family: "Lato", sans-serif;
 }
 
 .header__heading {
+  color: #1e212c;
   font-family: "Lato", sans-serif;
   font-size: 20px;
   letter-spacing: 0.02em;
-  color: #1e212c;
   text-transform: uppercase;
 }
 @media screen and (min-width: 990px) {
@@ -64,23 +64,23 @@ body {
   opacity: 0.6;
 }
 .header .site-header-main .site-header-account-links {
-  display: inline-flex;
   align-items: center;
+  display: inline-flex;
 }
 .header .site-header-main .menu-drawer__account,
 .header .site-header-main .account-button-separator,
 .header .site-header-main .footer-phone-block {
   color: #fff;
-  opacity: 0.6;
   font-size: 14px;
+  opacity: 0.6;
 }
 .header .site-header-main .footer-phone-block {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 .header .site-header-main .header-phone {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 .header .site-header-main .menu-drawer__account {
   margin-left: 0;
@@ -94,26 +94,29 @@ body {
   margin-right: 100px;
 }
 .header .site-navigation-wrapper .site-header-navigation-wrapper {
+  align-content: center;
   display: grid;
   grid-template-areas: "headin navigation icons";
   grid-template-columns: 1fr 2fr 2fr;
+  min-height: 84px;
 }
 .header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading,
 .header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading-link {
   grid-area: unset;
 }
 .header .site-navigation-wrapper .search-modal__form {
-  width: 380px;
   height: 44px;
-  top: calc(50% - 22px + 22px);
+  width: 380px;
 }
 .header .site-navigation-wrapper .header__icon--cart {
+  margin-left: 52px;
   width: 22px;
 }
 .header .site-navigation-wrapper .cart-count-bubble {
   background-color: #03cea4;
-  width: 23px;
+  border-radius: 4px;
   height: 20px;
   left: 30px;
-  border-radius: 4px;
+  top: 12px;
+  width: 23px;
 }

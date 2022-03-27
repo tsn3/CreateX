@@ -6,17 +6,17 @@ html {
 }
 
 body {
+  font-family: 'Lato', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
-  font-family: 'Lato', sans-serif;
 }
 
 .header__heading {
+  color: $gray-900;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   letter-spacing: .02em;
-  color: $gray-900;
   text-transform: uppercase;
 
   @media screen and (min-width: 990px) {
@@ -24,9 +24,10 @@ body {
   }
 }
 
-.title--primary  {
+.title--primary {
   font-family: 'Lato', sans-serif;
 }
+
 .page-width {
   max-width: 1230px;
 }
