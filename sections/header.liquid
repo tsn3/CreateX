@@ -556,6 +556,9 @@
           <a href="#swym-wishlist" class="swym-wishlist">
             <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-heart"></i>
           </a>
+          <a href="#swym-wishlist" class="swym-wishlist">
+  <i aria-hidden="true" focusable="false" role="presentation" class="icon icon-swym-wishlist"></i>
+</a>
           <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
             {%- liquid
               if cart == empty
@@ -573,9 +576,6 @@
                 <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
               </div>
             {%- endif -%}
-          </a>
-                    <a href="#swym-wishlist" class="swym-wishlist">
-            <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-heart"></i>
           </a>
         </div>
       </div>
