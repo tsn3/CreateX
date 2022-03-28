@@ -101,8 +101,8 @@ body {
   grid-template-areas: "headin navigation icons";
   min-height: 84px;
 }
-.header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading,
-.header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading-link {
+.header .site-navigation-wrapper .header__heading,
+.header .site-navigation-wrapper .header__heading-link {
   grid-area: unset;
 }
 .header .site-navigation-wrapper .search-modal__form {
@@ -122,8 +122,8 @@ body {
   width: 23px;
 }
 .header .site-navigation-wrapper .swym-wishlist {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-left: 52px;
   text-decoration: none;
 }

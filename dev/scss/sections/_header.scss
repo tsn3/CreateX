@@ -77,14 +77,14 @@
     .site-header-navigation-wrapper {
       align-content: center;
       display: grid;
-      grid-template-areas: "headin navigation icons";
+      grid-template-areas: 'headin navigation icons';
       //grid-template-columns: 1fr 2fr 2fr;
       min-height: 84px;
+    }
 
-      .header__heading,
-      .header__heading-link {
-        grid-area: unset;
-      }
+    .header__heading,
+    .header__heading-link {
+      grid-area: unset;
     }
 
     .search-modal__form {
@@ -107,8 +107,8 @@
     }
 
     .swym-wishlist {
-      display: flex;
       align-items: center;
+      display: flex;
       margin-left: 52px;
       text-decoration: none;
     }
