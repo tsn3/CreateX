@@ -19,7 +19,7 @@
       align-items: center;
       display: grid;
       grid-template-areas: 'left-icon navigation language icons';
-      grid-template-columns: 1fr 2fr 1fr 1fr;
+      //grid-template-columns: 1fr 2fr 1fr 1fr;
     }
 
     .mt-language-menu {
@@ -78,7 +78,7 @@
       align-content: center;
       display: grid;
       grid-template-areas: "headin navigation icons";
-      grid-template-columns: 1fr 2fr 2fr;
+      //grid-template-columns: 1fr 2fr 2fr;
       min-height: 84px;
 
       .header__heading,

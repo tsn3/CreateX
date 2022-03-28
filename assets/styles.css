@@ -50,7 +50,6 @@ body {
   align-items: center;
   display: grid;
   grid-template-areas: "left-icon navigation language icons";
-  grid-template-columns: 1fr 2fr 1fr 1fr;
 }
 .header .site-header-main .mt-language-menu {
   grid-area: language;
@@ -100,7 +99,6 @@ body {
   align-content: center;
   display: grid;
   grid-template-areas: "headin navigation icons";
-  grid-template-columns: 1fr 2fr 2fr;
   min-height: 84px;
 }
 .header .site-navigation-wrapper .site-header-navigation-wrapper .header__heading,
