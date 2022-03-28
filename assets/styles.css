@@ -33,7 +33,6 @@ body {
 
 .header {
   display: block;
-  height: 128px;
 }
 .header .site-header-wrapper {
   background-color: #424551;
@@ -60,8 +59,12 @@ body {
   margin: 0 auto;
 }
 .header .site-header-main .list-menu__item {
-  color: #fff;
   opacity: 0.6;
+}
+@media screen and (min-width: 990px) {
+  .header .site-header-main .list-menu__item {
+    color: #fff;
+  }
 }
 .header .site-header-main .site-header-account-links {
   align-items: center;
@@ -123,6 +126,7 @@ body {
 .header .site-navigation-wrapper .swym-wishlist {
   display: flex;
   align-items: center;
+  margin-left: 52px;
   text-decoration: none;
 }
 .header .site-navigation-wrapper .fa-heart {
