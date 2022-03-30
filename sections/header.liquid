@@ -440,6 +440,7 @@
         {%- if request.page_type == 'index' -%}
       </h1>
       {%- endif -%}
+      {% comment %}
       <nav class="header__inline-menu site-navigation">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
@@ -488,7 +489,45 @@
           {%- endfor -%}
         </ul>
       </nav>
-      <div class="header__icons">
+      {% endcomment %}
+        <nav class="menu header__inline-menu site-navigation">
+          <ul class="list-menu list-menu--inline">
+              {%- for link in section.settings.menu.links -%}
+                <li class="menu-item-has-children">
+                  {%- if link.links != blank -%}
+                    <a href="{{ link.url }}">{{ link.title | escape }}<i class="fa fa-angle-down"></i></a>
+                    <div class="sub-menu mega-menu mega-menu-column-4">
+                      <div class="list-item">
+                        <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce navmenu-submenu--desktop" role="list" tabindex="-1">
+                          {%- for childlink in link.links -%}
+                            <li class="desktop-oddColumnContent" data-reactid="185">
+                              <ul class="desktop-navBlock" data-reactid="186">
+                                <li data-reactid="187"><a href="{{ childlink.url }}" class="desktop-categoryName" data-reactid="188">{{ childlink.title | escape }}</a></li>
+                                <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}" class="header__submenu list-menu motion-reduce">
+                                  {%- for grandchildlink in childlink.links -%}
+                                    <li>
+                                      <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large desktop-categoryLink{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                        {{ grandchildlink.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              </ul>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    </div>
+                  {%- else -%}
+                    <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset list-menu__item-parent"{% if link.current %} aria-current="page"{% endif %}>
+                      <span {%- if link.current and request.page_type != 'index' %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+        </nav>
+     <div class="header__icons">
       {%- if settings.predictive_search_enabled -%}
         <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
           {%- endif -%}
