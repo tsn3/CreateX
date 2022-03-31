@@ -495,7 +495,7 @@
               {%- for link in section.settings.menu.links -%}
                 <li class="menu-item-has-children">
                   {%- if link.links != blank -%}
-                    <a href="{{ link.url }}">{{ link.title | escape }}<i class="fa fa-angle-down"></i></a>
+                    <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset list-menu__item-parent">{{ link.title | escape }}</a>
                     <div class="sub-menu mega-menu mega-menu-column-4">
                       {% assign image_block = false %}
                       {% assign linktitle = link.title | downcase %}
