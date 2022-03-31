@@ -440,76 +440,27 @@
         {%- if request.page_type == 'index' -%}
       </h1>
       {%- endif -%}
-      {% comment %}
-      <nav class="header__inline-menu site-navigation">
-        <ul class="list-menu list-menu--inline" role="list">
-          {%- for link in section.settings.menu.links -%}
-            <li class="navmenu-item navmenu-item-parent">
-              {%- if link.links != blank -%}
-                <details-disclosure>
-                  <details id="Details-HeaderMenu-{{ forloop.index }}">
-                    <summary class="header__menu-item list-menu__item link focus-inset list-menu__item-parent">
-                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                    </summary>
-                    <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce navmenu-submenu--desktop" role="list" tabindex="-1">
-                      {%- for childlink in link.links -%}
-                        <li>
-                          {%- if childlink.links == blank -%}
-                            <a href="{{ childlink.url }}" class="header__menu-item list-menu__item navmenu-item-child link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                              {{ childlink.title | escape }}
-                            </a>
-                          {%- else -%}
-                            <details id="Details-HeaderSubMenu-{{ forloop.index }}">
-                              <summary class="header__menu-item link link--text list-menu__item navmenu-item-child focus-inset caption-large">
-                                {{ childlink.title | escape }}
-                                {% render 'icon-caret' %}
-                              </summary>
-                              <ul id="HeaderMenu-SubMenuList-{{ forloop.index }}" class="header__submenu list-menu motion-reduce">
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li>
-                                    <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            </details>
-                          {%- endif -%}
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </details>
-                </details-disclosure>
-              {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset list-menu__item-parent"{% if link.current %} aria-current="page"{% endif %}>
-                  <span {%- if link.current and request.page_type != 'index' %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                </a>
-              {%- endif -%}
-            </li>
-          {%- endfor -%}
-        </ul>
-      </nav>
-      {% endcomment %}
         <nav class="menu header__inline-menu site-navigation">
           <ul class="list-menu list-menu--inline">
               {%- for link in section.settings.menu.links -%}
+                {%- assign three_level_nav = false -%}
+                {%- assign child_list_handle = link.title | handleize -%}
+                {% if linklists[child_list_handle].links != blank %}
+                  {% for childlink in linklists[child_list_handle].links %}
+                    {% assign grand_child_list_handle = childlink.title | handleize %}
+                    {% if linklists[grand_child_list_handle].links != blank %}
+                      {%- assign three_level_nav = true -%}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+                {%- assign child_list_handle = link.title | handleize -%}
                 <li class="menu-item-has-children">
-                  {%- if link.links != blank -%}
+                  {%- if linklists[child_list_handle].links != blank -%}
                     <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset list-menu__item-parent">{{ link.title | escape }}</a>
                     <div class="sub-menu mega-menu mega-menu-column-4">
-                      {% assign image_block = false %}
-                      {% assign linktitle = link.title | downcase %}
-                      {% for block in section.blocks %}
-                        {%- assign val = block.settings.mega_link | downcase -%}
-                        {% if val == linktitle %}
-                          {% if block.settings.menu_enable %}
-                            {% assign image_block = true %}
-                          {% endif %}
-                        {% endif %}
-                      {% endfor %}
                       <div class="list-item">
                         <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce navmenu-submenu--desktop" role="list" tabindex="-1">
-                          {%- for childlink in link.links -%}
+                          {%- for childlink in linklists[child_list_handle].links -%}
                             <li class="desktop-oddColumnContent" data-reactid="185">
                               <ul class="desktop-navBlock" data-reactid="186">
                                 <li data-reactid="187"><a href="{{ childlink.url }}" class="desktop-categoryName" data-reactid="188">{{ childlink.title | escape }}</a></li>
@@ -524,24 +475,29 @@
                                 </ul>
                               </ul>
                             </li>
-
                           {%- endfor -%}
                           <span class="image-wrapper">
-                                  <img class="site-subnav__image hide" src="{{ link.object.image | img_url: '100x100' }}" />
-                                </span>
+                            <img class="site-subnav__image" src="{{ link.object.image | img_url: '100x100' }}" />
+                          </span>
                         </ul>
                       </div>
-                      TEST521
                       <div class="image-section mega-list mega-list-logo">
-                        TESTXXX
+
                         {% for block in section.blocks %}
-                              <div class="img-box">
-                                <img src="{{ block.settings.image | img_url: '100x100' }}">
-                                <div class="text__section">
+                          {%- assign val = block.settings.mega_link | handleize -%}
+                          {% if val == child_list_handle %}
+                            {% if block.settings.menu_enable %}
+                              {% unless block.settings.link == blank %}<a href='{{ block.settings.link }}'>{% endunless %}
+                              <div class='img-box'>
+                                <img src='{{ block.settings.image | img_url: '50x50' }}'>
+                                <div class='text__section'>
                                   {% unless block.settings.title == blank %}<h3>{{ block.settings.title }}</h3>{% endunless %}
                                   {% unless block.settings.subtitle == blank %}<p>{{ block.settings.subtitle }}</p>{% endunless %}
                                 </div>
                               </div>
+                              {% unless block.settings.link == blank %}</a>{% endunless %}
+                            {% endif %}
+                          {% endif %}
                         {% endfor %}
                       </div>
                     </div>
