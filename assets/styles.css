@@ -33,10 +33,10 @@ body {
 
 .header {
   display: block;
-  padding: 15px;
   position: relative;
   width: 100%;
   z-index: 99;
+  padding-top: 0;
 }
 .header .site-header-wrapper {
   background-color: #424551;
@@ -388,4 +388,25 @@ li.menu-item-has-children:hover {
 
 .mega-menu {
   margin-top: 5px !important;
+}
+
+.mega-list-logo {
+  z-index: 10000;
+}
+
+.image-wrapper {
+  display: block;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 285px;
+}
+
+.image-wrapper .site-subnav__image {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
 }

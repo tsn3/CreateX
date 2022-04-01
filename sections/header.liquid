@@ -476,29 +476,31 @@
                               </ul>
                             </li>
                           {%- endfor -%}
+                          <div class="image-section mega-list mega-list-logo">
+                            {% for block in section.blocks %}
+                              {%- assign val = block.settings.mega_link | handleize -%}
+                              {% if val == child_list_handle %}
+                                {% if block.settings.menu_enable %}
+                                  {% unless block.settings.link == blank %}<a href='{{ block.settings.link }}'>{% endunless %}
+                                  <div class='image-wrapper'>
+                                    <img class="site-subnav__image" src='{{ block.settings.image | img_url: '285x285' }}'>
+                                    <div class='text__section'>
+                                      {% unless block.settings.title == blank %}<h3>{{ block.settings.title }}</h3>{% endunless %}
+                                      {% unless block.settings.subtitle == blank %}<p>{{ block.settings.subtitle }}</p>{% endunless %}
+                                    </div>
+                                  </div>
+                                  {% unless block.settings.link == blank %}</a>{% endunless %}
+                                {% endif %}
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                          {% comment %}
+                          Display the logo set for the collection
                           <span class="image-wrapper">
                             <img class="site-subnav__image" src="{{ link.object.image | img_url: '100x100' }}" />
                           </span>
+                          {% endcomment %}
                         </ul>
-                      </div>
-                      <div class="image-section mega-list mega-list-logo">
-
-                        {% for block in section.blocks %}
-                          {%- assign val = block.settings.mega_link | handleize -%}
-                          {% if val == child_list_handle %}
-                            {% if block.settings.menu_enable %}
-                              {% unless block.settings.link == blank %}<a href='{{ block.settings.link }}'>{% endunless %}
-                              <div class='img-box'>
-                                <img src='{{ block.settings.image | img_url: '50x50' }}'>
-                                <div class='text__section'>
-                                  {% unless block.settings.title == blank %}<h3>{{ block.settings.title }}</h3>{% endunless %}
-                                  {% unless block.settings.subtitle == blank %}<p>{{ block.settings.subtitle }}</p>{% endunless %}
-                                </div>
-                              </div>
-                              {% unless block.settings.link == blank %}</a>{% endunless %}
-                            {% endif %}
-                          {% endif %}
-                        {% endfor %}
                       </div>
                     </div>
                   {%- else -%}
@@ -861,7 +863,7 @@
   "blocks": [
     {
       "type": "logo_image",
-      "name": "Mega logo",
+      "name": "Custom menu block",
       "settings": [
         {
           "type": "checkbox",
