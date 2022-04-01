@@ -104,6 +104,22 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "92ae35b7-d21a-4341-bff9-4db1866d4d61": {
+            "type": "logo_image",
+            "settings": {
+              "menu_enable": true,
+              "image": "shopify:\/\/shop_images\/image54.png",
+              "mega_link": "women",
+              "link": "shopify:\/\/collections\/sale",
+              "title": "Back to school. Sale up to 50%",
+              "subtitle": "See offers"
+            }
+          }
+        },
+        "block_order": [
+          "92ae35b7-d21a-4341-bff9-4db1866d4d61"
+        ],
         "settings": {
           "color_scheme": "background-1",
           "phone-title": "Available 24\/7 at",
