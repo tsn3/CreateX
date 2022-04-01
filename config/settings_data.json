@@ -137,12 +137,24 @@
               "title": "Рandbags and backpacks for young ladies",
               "subtitle": "See offers now"
             }
+          },
+          "e1c4c0f9-e2b3-4c07-9c81-566ca6c4521e": {
+            "type": "logo_image",
+            "settings": {
+              "menu_enable": true,
+              "image": "shopify:\/\/shop_images\/person-tilts-their-head-up-and-looks-at-the-camera.jpg",
+              "mega_link": "boys",
+              "link": "shopify:\/\/collections\/kid",
+              "title": "Sportswear",
+              "subtitle": "View now"
+            }
           }
         },
         "block_order": [
           "92ae35b7-d21a-4341-bff9-4db1866d4d61",
           "460afa9c-c55b-4816-a5fe-118c0a6fe2a2",
-          "969bda5c-b23f-4e53-99bd-0c12e20946dd"
+          "969bda5c-b23f-4e53-99bd-0c12e20946dd",
+          "e1c4c0f9-e2b3-4c07-9c81-566ca6c4521e"
         ],
         "settings": {
           "color_scheme": "background-1",
