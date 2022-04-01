@@ -126,11 +126,23 @@
               "title": "Men's prices for men's shoes",
               "subtitle": "See all offers"
             }
+          },
+          "969bda5c-b23f-4e53-99bd-0c12e20946dd": {
+            "type": "logo_image",
+            "settings": {
+              "menu_enable": true,
+              "image": "shopify:\/\/shop_images\/woman-tilts-her-head-back-and-smiles-outdoors.jpg",
+              "mega_link": "girls",
+              "link": "shopify:\/\/collections\/kid",
+              "title": "Рandbags and backpacks for young ladies",
+              "subtitle": "See offers now"
+            }
           }
         },
         "block_order": [
           "92ae35b7-d21a-4341-bff9-4db1866d4d61",
-          "460afa9c-c55b-4816-a5fe-118c0a6fe2a2"
+          "460afa9c-c55b-4816-a5fe-118c0a6fe2a2",
+          "969bda5c-b23f-4e53-99bd-0c12e20946dd"
         ],
         "settings": {
           "color_scheme": "background-1",
