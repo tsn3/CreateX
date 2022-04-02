@@ -486,7 +486,12 @@
                                     <img class="site-subnav__image" src='{{ block.settings.image | img_url: '285x285' }}'>
                                     <div class='text__section'>
                                       {% unless block.settings.title == blank %}<h3>{{ block.settings.title }}</h3>{% endunless %}
-                                      {% unless block.settings.subtitle == blank %}<p>{{ block.settings.subtitle }}</p>{% endunless %}
+                                      {% unless block.settings.subtitle == blank %}
+                                        <button class="link-text__section" aria-expanded="true">
+                                          {{ block.settings.subtitle }}
+                                          {% render 'icon-arrow' %}
+                                        </button>
+                                      {% endunless %}
                                     </div>
                                   </div>
                                   {% unless block.settings.link == blank %}</a>{% endunless %}

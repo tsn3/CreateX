@@ -384,16 +384,27 @@ li.menu-item-has-children:hover {
 
 .mega-list-logo {
   z-index: 10000;
+  position: relative;
 }
 
 .image-wrapper {
   display: block;
   padding: 10px;
   position: absolute;
-  right: 0;
+  right: 90px;
   top: 50%;
-  transform: translate(0, -50%);
   width: 285px;
+
+  .text__section{
+    color: $gray-800;
+    font-size: 14px;
+    font-weight: 700;
+
+    .icon-arrow {
+      margin: 0 8px;
+      width: 12px;
+    }
+  }
 }
 
 .image-wrapper .site-subnav__image {
@@ -401,4 +412,24 @@ li.menu-item-has-children:hover {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
+}
+
+.link-text__section {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  color: $primary;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  left: 24px;
+  top: 0;
+}
+
+.link-text__section:hover {
+  color: $warning;
+  border: 1px solid $warning;
+
 }
