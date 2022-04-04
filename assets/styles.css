@@ -50,10 +50,6 @@ body {
     min-height: 44px;
   }
 }
-.header .site-header-main .header__icon--menu {
-  color: #fff;
-  position: initial;
-}
 .header .site-header-main .site-header-main-wrapper {
   align-items: center;
   display: grid;
@@ -74,23 +70,47 @@ body {
   }
 }
 .header .site-header-main .site-header-account-links {
-  align-items: center;
-  display: inline-flex;
+  display: none;
+}
+@media screen and (min-width: 990px) {
+  .header .site-header-main .site-header-account-links {
+    align-items: center;
+    display: flex;
+  }
 }
 .header .site-header-main .menu-drawer__account,
 .header .site-header-main .account-button-separator,
-.header .site-header-main .footer-phone-block {
-  color: #fff;
+.header .site-header-main .header-phone-block {
+  color: #424551;
   font-size: 14px;
   opacity: 0.6;
 }
-.header .site-header-main .footer-phone-block {
-  align-items: center;
-  display: flex;
+@media screen and (min-width: 990px) {
+  .header .site-header-main .menu-drawer__account,
+.header .site-header-main .account-button-separator,
+.header .site-header-main .header-phone-block {
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+}
+.header .site-header-main .header-phone-block {
+  display: none;
+}
+@media screen and (min-width: 990px) {
+  .header .site-header-main .header-phone-block {
+    align-items: center;
+    display: flex;
+  }
 }
 .header .site-header-main .header-phone {
-  color: #fff;
+  color: #1e212c;
   text-decoration: none;
+}
+@media screen and (min-width: 990px) {
+  .header .site-header-main .header-phone {
+    color: #fff;
+  }
 }
 .header .site-header-main .menu-drawer__account {
   margin-left: 0;
@@ -102,29 +122,56 @@ body {
 .header .site-navigation-wrapper .header__icons {
   align-items: center;
   justify-self: end;
-  margin-right: 100px;
+  margin-right: 50px;
+}
+@media screen and (min-width: 990px) {
+  .header .site-navigation-wrapper .header__icons {
+    margin-right: 100px;
+  }
 }
 .header .site-navigation-wrapper .site-header-navigation-wrapper {
   align-content: center;
   display: grid;
-  grid-template-areas: "headin navigation icons";
+  grid-template-areas: "left-icon headin icons";
+  grid-template-columns: 1fr 3fr 1fr;
   min-height: 84px;
+}
+@media screen and (min-width: 990px) {
+  .header .site-navigation-wrapper .site-header-navigation-wrapper {
+    grid-template-areas: "headin navigation icons";
+    grid-template-columns: 1fr 2fr 2fr;
+  }
 }
 .header .site-navigation-wrapper .header__heading,
 .header .site-navigation-wrapper .header__heading-link {
   align-self: center;
   grid-area: unset;
+  width: 130px;
 }
 .header .site-navigation-wrapper .list-menu--inline {
   align-items: center;
 }
 .header .site-navigation-wrapper .search-modal__form {
-  height: 44px;
-  width: 380px;
+  display: none;
+}
+@media screen and (min-width: 990px) {
+  .header .site-navigation-wrapper .search-modal__form {
+    display: block;
+    height: 44px;
+    width: 380px;
+  }
+}
+.header .site-navigation-wrapper .search-mobile {
+  display: block;
 }
 .header .site-navigation-wrapper .header__icon--cart {
-  margin-left: 52px;
+  margin-left: 12px;
   width: 22px;
+}
+@media screen and (min-width: 990px) {
+  .header .site-navigation-wrapper .header__icon--cart {
+    margin-left: 52px;
+  }
 }
 .header .site-navigation-wrapper .cart-count-bubble {
   background-color: #03cea4;
@@ -137,8 +184,12 @@ body {
 .header .site-navigation-wrapper .swym-wishlist {
   align-items: center;
   display: flex;
-  margin-left: 52px;
   text-decoration: none;
+}
+@media screen and (min-width: 990px) {
+  .header .site-navigation-wrapper .swym-wishlist {
+    margin-left: 52px;
+  }
 }
 .header .site-navigation-wrapper .fa-heart {
   color: #1e212c;
@@ -437,4 +488,37 @@ li.menu-item-has-children:hover {
 .link-text__section:hover {
   color: #f89828;
   border: 1px solid #f89828;
+}
+
+.menu-drawer .menu-drawer__account {
+  fill: #1e212c;
+}
+.menu-drawer .icon-account path {
+  fill: #1e212c;
+}
+.menu-drawer .menu-drawer__utility-links {
+  align-items: center;
+  background-color: #fff;
+  display: inline-flex;
+  padding: 1.1rem 3.2rem;
+}
+.menu-drawer .header-phone-block-mobile {
+  align-items: center;
+  color: #424551;
+  display: flex;
+  font-size: 14px;
+  text-decoration: none;
+}
+.menu-drawer .header-phone {
+  color: #424551;
+}
+.menu-drawer .header-phone-title {
+  color: #424551;
+  margin: 0;
+}
+.menu-drawer .menu-drawer__account,
+.menu-drawer .account-button-separator,
+.menu-drawer .header-phone-block {
+  color: #424551;
+  font-size: 14px;
 }

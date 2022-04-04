@@ -19,11 +19,6 @@
       min-height: 44px;
     }
 
-    .header__icon--menu {
-      color: $white;
-      position: initial;
-    }
-
     .site-header-main-wrapper {
       align-items: center;
       display: grid;
@@ -47,26 +42,45 @@
     }
 
     .site-header-account-links {
-      align-items: center;
-      display: inline-flex;
+      display: none;
+
+      @media screen and (min-width: 990px) {
+        align-items: center;
+        display: flex;
+      }
     }
 
     .menu-drawer__account,
     .account-button-separator,
-    .footer-phone-block {
-      color: $white;
+    .header-phone-block {
+      color: $gray-800;
       font-size: 14px;
       opacity: .6;
+
+      @media screen and (min-width: 990px) {
+        color: $white;
+        font-size: 14px;
+        opacity: .6;
+      }
+
     }
 
-    .footer-phone-block {
-      align-items: center;
-      display: flex;
+    .header-phone-block {
+      display: none;
+
+      @media screen and (min-width: 990px) {
+        align-items: center;
+        display: flex;
+      }
     }
 
     .header-phone {
-      color: $white;
+      color: $gray-900;
       text-decoration: none;
+
+      @media screen and (min-width: 990px) {
+        color: $white;
+      }
     }
 
     .menu-drawer__account {
@@ -81,21 +95,29 @@
     .header__icons {
       align-items: center;
       justify-self: end;
-      margin-right: 100px;
+      margin-right: 50px;
+      @media screen and (min-width: 990px) {
+        margin-right: 100px;
+      }
     }
 
     .site-header-navigation-wrapper {
       align-content: center;
       display: grid;
-      grid-template-areas: 'headin navigation icons';
-      //grid-template-columns: 1fr 2fr 2fr;
+      grid-template-areas: "left-icon headin icons";
+      grid-template-columns: 1fr 3fr 1fr;
       min-height: 84px;
+      @media screen and (min-width: 990px) {
+        grid-template-areas: 'headin navigation icons';
+        grid-template-columns: 1fr 2fr 2fr;
+      }
     }
 
     .header__heading,
     .header__heading-link {
       align-self: center;
       grid-area: unset;
+      width: 130px;
     }
 
     .list-menu--inline{
@@ -103,13 +125,25 @@
     }
 
     .search-modal__form {
-      height: 44px;
-      width: 380px;
+      display: none;
+
+      @media screen and (min-width: 990px) {
+        display: block;
+        height: 44px;
+        width: 380px;
+      }
+    }
+    .search-mobile {
+      display: block;
     }
 
     .header__icon--cart {
-      margin-left: 52px;
+      margin-left: 12px;
       width: 22px;
+
+      @media screen and (min-width: 990px) {
+        margin-left: 52px;
+      }
     }
 
     .cart-count-bubble {
@@ -124,8 +158,11 @@
     .swym-wishlist {
       align-items: center;
       display: flex;
-      margin-left: 52px;
       text-decoration: none;
+
+      @media screen and (min-width: 990px) {
+        margin-left: 52px;
+      }
     }
 
     .fa-heart {
@@ -431,5 +468,44 @@ li.menu-item-has-children:hover {
 .link-text__section:hover {
   color: $warning;
   border: 1px solid $warning;
+}
 
+.menu-drawer {
+    .menu-drawer__account {
+      fill: $gray-900;
+    }
+
+  .icon-account path {
+    fill: $gray-900;
+  }
+
+  .menu-drawer__utility-links {
+    align-items: center;
+    background-color: $white;
+    display: inline-flex;
+    padding: 1.1rem 3.2rem;
+  }
+
+  .header-phone-block-mobile {
+    align-items: center;
+    color: $gray-800;
+    display: flex;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .header-phone {
+    color: $gray-800;
+  }
+
+  .header-phone-title {
+    color: $gray-800;
+    margin: 0;
+  }
+  .menu-drawer__account,
+  .account-button-separator,
+  .header-phone-block {
+    color: $gray-800;
+    font-size: 14px;
+  }
 }
