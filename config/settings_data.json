@@ -178,8 +178,8 @@
           "footer-2": {
             "type": "text",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "Get in touch",
+              "subtext": "<p>Call: <a href=\"tel:+0976191477\" target=\"_blank\" title=\"tel:+0976191477\">(097) 619-1477<br\/><\/a>Email: <a href=\"mailto:tsn3ps@gmail.com\" target=\"_blank\" title=\"mailto:tsn3ps@gmail.com\">hello@createx.com<\/a><\/p>"
             }
           }
         },
