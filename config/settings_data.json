@@ -115,10 +115,22 @@
               "title": "Back to school. Sale up to 50%",
               "subtitle": "See offers"
             }
+          },
+          "b50a3be4-785c-440d-ad28-a3d2c41b40d6": {
+            "type": "logo_image",
+            "settings": {
+              "menu_enable": true,
+              "image": "shopify:\/\/shop_images\/stylish-man-in-bow-tie.jpg",
+              "mega_link": "men",
+              "link": "shopify:\/\/collections\/men",
+              "title": "Business suit. Sale up to 70%",
+              "subtitle": "See offers"
+            }
           }
         },
         "block_order": [
-          "909a3489-356f-4242-93b1-93e736176df4"
+          "909a3489-356f-4242-93b1-93e736176df4",
+          "b50a3be4-785c-440d-ad28-a3d2c41b40d6"
         ],
         "settings": {
           "color_scheme": "background-1",
