@@ -1,0 +1,41 @@
+.footer {
+  background-color: $gray-900;
+
+  .footer-block__heading {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  .list-menu__item {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: $white;
+    opacity: .6;
+    margin: 4px 0px;
+    transition: all .3s;
+    text-decoration: none;
+
+    &:hover {
+      color: $danger;
+    }
+  }
+
+  .footer-block__details-content {
+    .list-menu__item--active {
+      color: $success;
+    }
+  }
+
+  .footer-block__details-content {
+    color: $white;
+    opacity: .6;
+  }
+
+  .copyright__content {
+    color: $white;
+  }
+}
