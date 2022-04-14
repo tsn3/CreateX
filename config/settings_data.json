@@ -171,8 +171,8 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "Shop",
+              "menu": "shop"
             }
           },
           "footer-2": {
