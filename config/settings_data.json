@@ -126,11 +126,23 @@
               "title": "Business suit. Sale up to 70%",
               "subtitle": "See offers"
             }
+          },
+          "1f5d0331-a397-467d-9244-c799c31e32c3": {
+            "type": "logo_image",
+            "settings": {
+              "menu_enable": true,
+              "image": "shopify:\/\/shop_images\/woman-tilts-her-head-back-and-smiles-outdoors.jpg",
+              "mega_link": "girls",
+              "link": "shopify:\/\/collections\/bags-bagpacks",
+              "title": "Hiking backpacks. Sale up to 40%",
+              "subtitle": "See offers"
+            }
           }
         },
         "block_order": [
           "909a3489-356f-4242-93b1-93e736176df4",
-          "b50a3be4-785c-440d-ad28-a3d2c41b40d6"
+          "b50a3be4-785c-440d-ad28-a3d2c41b40d6",
+          "1f5d0331-a397-467d-9244-c799c31e32c3"
         ],
         "settings": {
           "color_scheme": "background-1",
