@@ -542,8 +542,35 @@ li.menu-item-has-children:hover {
 }
 .footer .footer-block__details-content {
   color: #fff;
+}
+.footer .footer-block__details-content a {
+  font-size: 16px;
+  color: #fff;
   opacity: 0.6;
+  transition: all 0.3s;
+}
+.footer .footer-block__details-content a:hover {
+  color: #ff4242;
 }
 .footer .copyright__content {
+  color: #fff;
+}
+.footer .copyright__content a {
+  transition: all 0.3s;
+}
+.footer .copyright__content a:hover {
+  color: #ff4242;
+  text-decoration: none;
+}
+.footer .list-social__link {
+  background-color: #424551;
+  border-radius: 4px;
+  margin-right: 12px;
+  transition: all 0.3s;
+}
+.footer .list-social__link:hover {
+  background-color: #03cea4;
+}
+.footer .list-social__link .icon {
   color: #fff;
 }

@@ -32,10 +32,44 @@
 
   .footer-block__details-content {
     color: $white;
-    opacity: .6;
+
+    a {
+      font-size: 16px;
+      color: $white;
+      opacity: .6;
+      transition: all .3s;
+
+      &:hover {
+        color: $danger;
+      }
+    }
   }
 
   .copyright__content {
     color: $white;
+
+    a {
+      transition: all .3s;
+
+      &:hover {
+        color: $danger;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .list-social__link {
+    background-color: $gray-800;
+    border-radius: 4px;
+    margin-right: 12px;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $success;
+    }
+
+    .icon {
+      color: $white;
+    }
   }
 }
