@@ -802,7 +802,19 @@
               "label": "Subtext"
             }
           }
+        },
+        "image_text": {
+          "name": "Image with text",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "subtext": {
+              "label": "Image"
+            }
+          }
         }
+
       },
       "settings": {
         "color_scheme": {
