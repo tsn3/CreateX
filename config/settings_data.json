@@ -181,12 +181,22 @@
               "heading": "Get in touch",
               "subtext": "<p>Call: <a href=\"tel:+0976191477\" target=\"_blank\" title=\"tel:+0976191477\">(097) 619-1477<br\/><\/a>Email: <a href=\"mailto:tsn3ps@gmail.com\" target=\"_blank\" title=\"mailto:tsn3ps@gmail.com\">hello@createx.com<\/a><\/p>"
             }
+          },
+          "d5318bbf-e0b4-47fa-9b9b-6559d24f78e3": {
+            "type": "image_text",
+            "settings": {
+              "heading": "Download our app",
+              "image_text": "shopify:\/\/shop_images\/app-store.png",
+              "image_text_second": "shopify:\/\/shop_images\/google-play.png",
+              "image_text_width": 160
+            }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2"
+          "footer-2",
+          "d5318bbf-e0b4-47fa-9b9b-6559d24f78e3"
         ],
         "settings": {
           "color_scheme": "background-1",
