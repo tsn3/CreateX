@@ -251,7 +251,9 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "rights_reserved": "All rights reserved",
+      "text_studio": "Made with by Createx Studio"
     },
     "featured_blog": {
       "view_all": "View all",
