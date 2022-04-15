@@ -187,7 +187,9 @@
             "settings": {
               "heading": "Download our app",
               "image_text": "shopify:\/\/shop_images\/app-store.png",
+              "link": "https:\/\/www.apple.com\/ua\/app-store\/",
               "image_text_second": "shopify:\/\/shop_images\/google-play.png",
+              "link_second": "https:\/\/play.google.com\/store\/apps",
               "image_text_width": 160
             }
           }
