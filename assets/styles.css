@@ -567,10 +567,19 @@ li.menu-item-has-children:hover {
   border-radius: 4px;
   margin-right: 12px;
   transition: all 0.3s;
+  height: 32px;
+  width: 32px;
 }
 .footer .list-social__link:hover {
   background-color: #03cea4;
 }
 .footer .list-social__link .icon {
   color: #fff;
+}
+.footer .list-social {
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.footer .list-social__link {
+  padding: 7px;
 }

@@ -63,6 +63,8 @@
     border-radius: 4px;
     margin-right: 12px;
     transition: all .3s;
+    height: 32px;
+    width: 32px;
 
     &:hover {
       background-color: $success;
@@ -71,5 +73,14 @@
     .icon {
       color: $white;
     }
+  }
+
+  .list-social {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .list-social__link {
+    padding: 7px;
   }
 }
