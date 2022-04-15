@@ -546,7 +546,7 @@ li.menu-item-has-children:hover {
   text-transform: capitalize;
   color: #fff;
   opacity: 0.6;
-  margin: 4px 0px;
+  margin: 4px 0;
   transition: all 0.3s;
   text-decoration: none;
 }
@@ -570,6 +570,7 @@ li.menu-item-has-children:hover {
 }
 .footer .copyright__content {
   color: #fff;
+  font-size: 12px;
 }
 .footer .copyright__content a {
   transition: all 0.3s;
@@ -581,9 +582,10 @@ li.menu-item-has-children:hover {
 .footer .list-social__link {
   background-color: #424551;
   border-radius: 4px;
+  height: 32px;
+  padding: 7px;
   margin-right: 12px;
   transition: all 0.3s;
-  height: 32px;
   width: 32px;
 }
 .footer .list-social__link:hover {
@@ -596,10 +598,6 @@ li.menu-item-has-children:hover {
   justify-content: flex-start;
   margin-top: 10px;
 }
-.footer .list-social__link {
-  padding: 7px;
-}
-.footer .copyright__content {
-  font-size: 12px;
-  color: #fff;
+.footer .footer-block-image img {
+  margin-right: 20px;
 }

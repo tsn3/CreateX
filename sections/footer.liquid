@@ -150,7 +150,7 @@
                     </ul>
                   {%- endif -%}
                 {%- when 'image' -%}
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                  <div class="footer-block__details-content footer-block-image{{ block.settings.alignment }}">
                     {%- if block.settings.image != blank -%}
                       {%- assign image_size = block.settings.image_width | append: 'x' -%}
                       <img
@@ -167,9 +167,10 @@
                     {%- endif -%}
                   </div>
                 {%- when 'image_text' -%}
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                  <div class="footer-block__details-content footer-block-image{{ block.settings.alignment }}">
                     {%- if block.settings.image_text != blank -%}
                       {%- assign image_text_size = block.settings.image_text_width | append: 'x' -%}
+                    <a href="{{ block.settings.link }}">
                       <img
                         srcset= "{{ block.settings.image_text | img_url: image_text_size }}, {{ block.settings.image_text | img_url: image_text_size, scale: 2 }} 2x"
                         src="{{ block.settings.image_text | image_url: width: 200 }}"
@@ -179,6 +180,8 @@
                         height="{{ block.settings.image_text.height }}"
                         style="max-width: min(100%, {{ block.settings.image_text_width }}px);"
                       >
+                    </a>
+                    <a href="{{ block.settings.link_second }}">
                       <img
                         srcset= "{{ block.settings.image_text_second | img_url: image_text_size }}, {{ block.settings.image_text | img_url: image_text_size, scale: 2 }} 2x"
                         src="{{ block.settings.image_text_second | image_url: width: 200 }}"
@@ -190,6 +193,7 @@
                         height="{{ block.settings.image_text_second.height }}"
                         style="max-width: min(100%, {{ block.settings.image_text_width }}px);"
                       >
+                    </a>
                     {%- else -%}
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
@@ -515,9 +519,19 @@
           "label": "Image with text"
         },
         {
+          "type": "url",
+          "id": "link",
+          "label": "Add link"
+        },
+        {
           "type": "image_picker",
           "id": "image_text_second",
           "label": "Image with text second"
+        },
+        {
+          "type": "url",
+          "id": "link_second",
+          "label": "Add link"
         },
         {
           "type": "range",
