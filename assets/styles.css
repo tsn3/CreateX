@@ -505,6 +505,7 @@ li.menu-item-has-children:hover {
   height: 36px;
   left: 24px;
   top: 0;
+  transition: all 0.3s;
 }
 
 .link-text__section:hover {
@@ -543,6 +544,10 @@ li.menu-item-has-children:hover {
 .menu-drawer .header-phone-block {
   color: #424551;
   font-size: 14px;
+}
+
+#shopify-section-announcement-bar {
+  z-index: 0;
 }
 
 .footer {
