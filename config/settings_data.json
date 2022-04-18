@@ -108,7 +108,7 @@
             "type": "announcement",
             "settings": {
               "text": "<p>Up to 70% Off. <a href=\"\/collections\/sale\" target=\"_blank\" title=\"Sale up to 70%\">Shop our latest sale styles<\/a><\/p>",
-              "color_scheme": "accent-2",
+              "color_scheme": "accent-1",
               "link": ""
             }
           }
