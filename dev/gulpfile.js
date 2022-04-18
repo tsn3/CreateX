@@ -57,7 +57,7 @@ gulp.task(`js`, () => {
             presets: [`@babel/preset-env`]
         }))
         .pipe(concat(`custom.js`))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(assetsDir));
 });
 
