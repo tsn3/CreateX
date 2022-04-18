@@ -99,6 +99,19 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "63aef1c5-cd65-4d09-8511-0cba1f910d58": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Up to 70% Off. <a href=\"\/collections\/sale\" target=\"_blank\" title=\"Sale up to 70%\">Shop our latest sale styles<\/a><\/p>",
+              "color_scheme": "accent-2",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "63aef1c5-cd65-4d09-8511-0cba1f910d58"
+        ],
         "settings": {
         }
       },
@@ -336,7 +349,7 @@
             "announcement-bar-0": {
               "type": "announcement",
               "settings": {
-                "text": "Welcome to our store",
+                "text": "<p>Welcome to our store<\/p>",
                 "color_scheme": "background-1",
                 "link": ""
               }
