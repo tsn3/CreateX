@@ -31,12 +31,19 @@ body {
   max-width: 1400px;
 }
 
+@media screen and (min-width: 750px) {
+  .section-header {
+    margin-bottom: 0 !important;
+  }
+}
+
 .header {
   display: block;
   position: relative;
   width: 100%;
   z-index: 99;
   padding-top: 0;
+  padding-bottom: 0;
 }
 .header .site-header-wrapper {
   background-color: #424551;
@@ -548,6 +555,26 @@ li.menu-item-has-children:hover {
 
 #shopify-section-announcement-bar {
   z-index: 0;
+}
+
+.announcement-bar {
+  text-align: center;
+}
+.announcement-bar p {
+  display: inline;
+  font-size: 12px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0.7rem;
+}
+.announcement-bar a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+.announcement-bar a:hover {
+  color: #ff4242;
 }
 
 .footer {

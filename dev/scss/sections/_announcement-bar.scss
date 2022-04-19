@@ -2,3 +2,26 @@
 #shopify-section-announcement-bar {
   z-index: 0;
 }
+
+.announcement-bar {
+  text-align: center;
+
+  p {
+    display: inline;
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0;
+    padding: .7rem;
+  }
+
+  a {
+    color: $white;
+    font-weight: 400;
+    text-decoration: underline;
+    transition: all .3s;
+
+    &:hover {
+      color: $danger;
+    }
+  }
+}
