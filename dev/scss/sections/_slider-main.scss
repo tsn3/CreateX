@@ -1,1 +1,31 @@
 // --- slider main--- //
+
+.slideshow-section {
+
+  .banner--large:not(.banner--adapt) {
+    @media screen and (min-width: 750px) {
+      min-height: 80rem;
+    }
+  }
+
+  .slideshow__control-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .slider-counter__link {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  .slider-counter__link--numbers {
+    color: $gray-800;
+    opacity: 0.6;
+  }
+
+  .slider-counter__link--active.slider-counter__link--numbers {
+    opacity: 1;
+  }
+}
