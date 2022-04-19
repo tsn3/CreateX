@@ -10,7 +10,6 @@
 
   .slideshow__control-wrapper {
     width: 100%;
-    justify-content: space-between;
   }
 
   .slider-counter__link {
@@ -18,6 +17,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
+    text-decoration: underline;
   }
 
   .slider-counter__link--numbers {
@@ -27,5 +27,62 @@
 
   .slider-counter__link--active.slider-counter__link--numbers {
     opacity: 1;
+  }
+
+  .banner {
+    position: relative;
+  }
+
+  .slideshow__controls {
+    position: unset;
+  }
+
+  .slider-button {
+    top: 50%;
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-50%);
+    z-index: 5;
+    transition: all .3s;
+  }
+
+  .slider-button--prev {
+    left: 32px;
+    background: #FFFFFF;
+    opacity: 0.5;
+    border-radius: 50px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .slider-button--next {
+    right: 32px;
+    background: #FFFFFF;
+    opacity: 0.5;
+    border-radius: 50px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .slideshow__text-wrapper {
+    position: relative;
+  }
+
+  .slider-counter {
+    position: absolute;
+    bottom: 180px;
+    z-index: 5;
+    width: 50%;
+    left: 16%;
+  }
+
+  .slider-button--next {
+    transform: rotate(180deg);
   }
 }

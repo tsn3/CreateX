@@ -309,7 +309,7 @@ a {
   position: absolute;
   transition: all .5s ease;
   visibility: hidden;
-  z-index: 500;
+  z-index: 99;
 }
 
 @media(min-width: 992px) {
@@ -453,7 +453,7 @@ li.menu-item-has-children:hover {
 
 .mega-list-logo {
   position: relative;
-  z-index: 10000;
+  z-index: 99;
 }
 
 .image-wrapper {
