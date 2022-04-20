@@ -109,4 +109,19 @@
   .slider-button--next {
     transform: rotate(180deg);
   }
+
+  @media screen and (min-width: 750px) {
+    .banner--desktop-transparent {
+      .banner__box {
+        --color-button: 23, 105, 106;
+        --color-button-text: 0, 0, 0;
+      }
+
+      .button--secondary {
+        border: 1px solid $primary;
+        --color-button-text: 0, 0, 0;
+
+      }
+    }
+  }
 }

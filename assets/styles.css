@@ -674,6 +674,16 @@ li.menu-item-has-children:hover {
 .slideshow-section .slider-button--next {
   transform: rotate(180deg);
 }
+@media screen and (min-width: 750px) {
+  .slideshow-section .banner--desktop-transparent .banner__box {
+    --color-button: 23, 105, 106;
+    --color-button-text: 0, 0, 0;
+  }
+  .slideshow-section .banner--desktop-transparent .button--secondary {
+    border: 1px solid #17696a;
+    --color-button-text: 0, 0, 0;
+  }
+}
 
 .footer {
   background-color: #1e212c;
