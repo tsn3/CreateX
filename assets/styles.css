@@ -586,18 +586,31 @@ li.menu-item-has-children:hover {
   width: 100%;
 }
 .slideshow-section .slider-counter__link {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
-  text-decoration: underline;
+  text-decoration: none;
+  padding: 1rem;
+  text-align: start;
+  text-decoration: none;
+  border-bottom: 2px solid #424551;
+  opacity: 0.3;
+  display: inline-block;
+  line-height: 0.5;
+  width: 178px;
+  margin: 0 4px;
 }
 .slideshow-section .slider-counter__link--numbers {
   color: #424551;
-  opacity: 0.6;
+}
+.slideshow-section .slider-counter__link--numbers:hover {
+  transform: scale(1);
 }
 .slideshow-section .slider-counter__link--active.slider-counter__link--numbers {
   opacity: 1;
+  text-decoration: none;
+  transform: scale(1);
 }
 .slideshow-section .banner {
   position: relative;
@@ -606,42 +619,57 @@ li.menu-item-has-children:hover {
   position: unset;
 }
 .slideshow-section .slider-button {
-  top: 50%;
-  position: absolute;
-  display: block;
-  width: 48px;
-  height: 48px;
-  transform: translateY(-50%);
-  z-index: 5;
-  transition: all 0.3s;
+  display: none;
+}
+@media screen and (min-width: 750px) {
+  .slideshow-section .slider-button {
+    top: 50%;
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 48px;
+    transform: translateY(-50%);
+    z-index: 5;
+    transition: all 0.3s;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 50px;
+  }
+  .slideshow-section .slider-button:hover {
+    opacity: 1;
+  }
 }
 .slideshow-section .slider-button--prev {
-  left: 32px;
-  background: #FFFFFF;
-  opacity: 0.5;
-  border-radius: 50px;
+  left: 15px;
 }
-.slideshow-section .slider-button--prev:hover {
-  opacity: 1;
+@media screen and (min-width: 1400px) {
+  .slideshow-section .slider-button--prev {
+    left: 32px;
+  }
 }
 .slideshow-section .slider-button--next {
-  right: 32px;
-  background: #FFFFFF;
-  opacity: 0.5;
-  border-radius: 50px;
+  right: 15px;
 }
-.slideshow-section .slider-button--next:hover {
-  opacity: 1;
+@media screen and (min-width: 1400px) {
+  .slideshow-section .slider-button--next {
+    right: 32px;
+  }
 }
 .slideshow-section .slideshow__text-wrapper {
   position: relative;
 }
 .slideshow-section .slider-counter {
-  position: absolute;
-  bottom: 180px;
-  z-index: 5;
-  width: 50%;
-  left: 16%;
+  display: none;
+}
+@media screen and (min-width: 750px) {
+  .slideshow-section .slider-counter {
+    display: block;
+    position: absolute;
+    bottom: 180px;
+    z-index: 5;
+    width: 50%;
+    left: 16%;
+  }
 }
 .slideshow-section .slider-button--next {
   transform: rotate(180deg);
