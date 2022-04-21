@@ -168,7 +168,7 @@
           "logo": "shopify:\/\/shop_images\/Navbar-logo.png",
           "logo_width": 130,
           "logo_position": "middle-left",
-          "menu-primary": "main-menu",
+          "menu-primary": "menu-secondary",
           "menu": "main-menu",
           "show_line_separator": false,
           "enable_sticky_header": true,
