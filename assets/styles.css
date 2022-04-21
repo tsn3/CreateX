@@ -659,9 +659,19 @@ li.menu-item-has-children:hover {
 }
 .slideshow-section .slideshow__text-wrapper .banner__text {
   color: #1e212c;
-  font-size: 72px;
+  font-size: 32px;
   font-weight: 900;
   letter-spacing: 1px;
+}
+@media screen and (min-width: 750px) {
+  .slideshow-section .slideshow__text-wrapper .banner__text {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .slideshow-section .slideshow__text-wrapper .banner__text {
+    font-size: 72px;
+  }
 }
 .slideshow-section .slider-counter {
   display: none;
