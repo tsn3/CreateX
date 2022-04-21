@@ -64,6 +64,7 @@
       transform: translateY(-50%);
       transition: all .3s;
       width: 48px;
+      z-index: 5;
 
       &:hover {
         opacity: 1;
@@ -116,6 +117,7 @@
       left: 16%;
       position: absolute;
       width: 50%;
+      z-index: 5;
     }
   }
 

@@ -632,6 +632,7 @@ li.menu-item-has-children:hover {
     transform: translateY(-50%);
     transition: all 0.3s;
     width: 48px;
+    z-index: 5;
   }
   .slideshow-section .slider-button:hover {
     opacity: 1;
@@ -683,6 +684,7 @@ li.menu-item-has-children:hover {
     left: 16%;
     position: absolute;
     width: 50%;
+    z-index: 5;
   }
 }
 @media screen and (min-width: 750px) {
