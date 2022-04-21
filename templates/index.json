@@ -6,7 +6,7 @@
         "16502943793d2fe418-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bearded-young-man.jpg",
+            "image": "shopify:\/\/shop_images\/image5.png",
             "heading": "New collection",
             "heading_size": "h2",
             "subheading": "Menswear 2022",
@@ -48,7 +48,7 @@
             "subheading": "Womenswear 2022",
             "button_label": "Shop sale",
             "link": "shopify:\/\/collections\/women",
-            "button_style_secondary": true,
+            "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": false,
             "text_alignment": "left",
@@ -66,7 +66,7 @@
             "subheading": "Kidswear 2022",
             "button_label": "Shop sale",
             "link": "shopify:\/\/collections\/kid",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "box_align": "middle-left",
             "show_text_box": false,
             "text_alignment": "left",
