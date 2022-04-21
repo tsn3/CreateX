@@ -13,20 +13,19 @@
   }
 
   .slider-counter__link {
+    border-bottom: 2px solid $gray-800;
+    display: inline-block;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
-    text-decoration: none;
+    line-height: .5;
+    margin: 0 4px;
+    opacity: .3;
     padding: 1rem;
     text-align: start;
     text-decoration: none;
-    border-bottom: 2px solid $gray-800;
-    opacity: .3;
-    display: inline-block;
-    line-height: 0.5;
     width: 178px;
-    margin: 0 4px;
   }
 
   .slider-counter__link--numbers {
@@ -55,17 +54,17 @@
     display: none;
 
     @media screen and (min-width: 750px) {
-      top: 50%;
-      position: absolute;
-      display: block;
-      width: 48px;
-      height: 48px;
-      transform: translateY(-50%);
-      z-index: 5;
-      transition: all .3s;
       background: $white;
-      opacity: .5;
       border-radius: 50px;
+      display: block;
+      height: 48px;
+      opacity: .5;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .3s;
+      width: 48px;
+      z-index: 5;
 
       &:hover {
         opacity: 1;
@@ -83,6 +82,7 @@
 
   .slider-button--next {
     right: 15px;
+    transform: rotate(180deg) translateY(24px);
 
     @media screen and (min-width: 1400px) {
       right: 32px;
@@ -91,36 +91,39 @@
 
   .slideshow__text-wrapper {
     position: relative;
+
+    .banner__text {
+      color: $gray-900;
+      font-size: 72px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
   }
 
   .slider-counter {
     display: none;
 
     @media screen and (min-width: 750px) {
-      display: block;
-      position: absolute;
       bottom: 180px;
-      z-index: 5;
-      width: 50%;
+      display: block;
       left: 16%;
+      position: absolute;
+      width: 50%;
+      z-index: 5;
     }
-  }
-
-  .slider-button--next {
-    transform: rotate(180deg);
   }
 
   @media screen and (min-width: 750px) {
     .banner--desktop-transparent {
       .banner__box {
         --color-button: 23, 105, 106;
-        --color-button-text: 0, 0, 0;
+        --color-button-text: 255, 255, 255;
+        --color-foreground: 30, 33, 44;
       }
 
       .button--secondary {
+        --color-button-text: 23, 105, 106;
         border: 1px solid $primary;
-        --color-button-text: 0, 0, 0;
-
       }
     }
   }
