@@ -210,16 +210,15 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  {% include 'sca-quick-view-init' %}
- </head>
+  </head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    {% section 'header' %}
     {% section 'announcement-bar' %}
+    {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
@@ -266,8 +265,5 @@
   {% include 'mokool-translate' %}
 {% include 'swymSnippet' %}
 
-    {% if shop.metafields.qimify_quickview.script_src %}
-<script type="text/javascript" src="{{ shop.metafields.qimify_quickview.script_src }}&shop={{shop.permanent_domain }}" async="async"></script>
-{% endif %}
- </body>
+</body>
 </html>
