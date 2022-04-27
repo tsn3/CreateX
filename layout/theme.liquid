@@ -210,7 +210,8 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-  </head>
+  {% include 'sca-quick-view-init' %}
+ </head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -265,5 +266,6 @@
   {% include 'mokool-translate' %}
 {% include 'swymSnippet' %}
 
-</body>
+{% include 'sca-quick-view-template' %} 
+ </body>
 </html>
